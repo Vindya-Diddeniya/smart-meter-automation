@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.0 on darwin)" generated="2026-03-15T15:52:25.614737" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/Users/vindyadiddeniya/Documents/projects/smart-meter-automation/tests">
+<suite id="s1-s1" name="Api Tests" source="/Users/vindyadiddeniya/Documents/projects/smart-meter-automation/tests/api_tests.robot">
+<test id="s1-s1-t1" name="Get Users List Test" line="5">
+<kw name="Create API Session" owner="api_keywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-03-15T15:52:26.034533" level="INFO">Creating Session using : alias=demo, url=https://reqres.in, headers={'x-api-key': 'reqres_49137685aceb4f4bba7bed2aa87f06fe', 'User-Agent': 'RobotFramework API Test'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>demo</arg>
+<arg>${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+<arg>verify=False</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-03-15T15:52:26.033938" elapsed="0.000889"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:26.033170" elapsed="0.001870"/>
+</kw>
+<kw name="Get Users List" owner="api_keywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-03-15T15:52:26.382641" level="INFO">GET Request : url=https://reqres.in/api/users?page=2 
+ path_url=/api/users?page=2 
+ headers={'User-Agent': 'RobotFramework API Test', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres_49137685aceb4f4bba7bed2aa87f06fe'} 
+ body=None 
+ </msg>
+<msg time="2026-03-15T15:52:26.383032" level="INFO">GET Response : url=https://reqres.in/api/users?page=2 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 15 Mar 2026 13:52:27 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Cache-Control': 'no-store', 'Etag': 'W/"5c9-KFuFxlu1/KCqT8RwCyTJmKYf8Rs"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '20', 'Ratelimit-Policy': '20;w=60', 'Ratelimit-Remaining': '19', 'Ratelimit-Reset': '60', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Tg3OZ2EJQ5RELtCM2szo9r6Izr%2B5vgF1KruYJi0zeyY%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1773582747"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=Tg3OZ2EJQ5RELtCM2szo9r6Izr%2B5vgF1KruYJi0zeyY%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1773582747"', 'Server': 'cloudflare', 'Vary': 'Origin', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Ratelimit-Limit': '250', 'X-Ratelimit-Remaining': '245', 'X-Ratelimit-Reset': '1773619200', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Tip': 'Add real user auth to your app with magic codes - reqres.in/docs', 'X-Reqres-Trial': 'true', 'X-Reqres-Trial-Days-Remaining': '11', 'X-Reqres-Trial-Expires': '2026-03-26T09:12:29.466Z', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': '716bf25b-b5de-8501-ffea-dc980938447a', 'X-Robots-Tag': 'noindex, nofollow', 'X-Xss-Protection': '1; mode=block', 'cf-cache-status': 'BYPASS', 'Content-Encoding': 'gzip', 'CF-RAY': '9dcbffabcc0c5288-HEL'} 
+ body={"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_a","message":"Classic ReqRes still works. Projects add persistence, auth, and logs.","cta":{"label":"See example app","url":"https://app.reqres.in/examples/notes-app"},"context":"legacy_success"}} 
+ </msg>
+<msg time="2026-03-15T15:52:26.383293" level="INFO">/Users/vindyadiddeniya/Documents/projects/smart-meter-automation/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-03-15T15:52:26.383644" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>demo</arg>
+<arg>/api/users</arg>
+<arg>params=page=2</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-03-15T15:52:26.035722" elapsed="0.348003"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2026-03-15T15:52:26.384088" elapsed="0.000644"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:26.035344" elapsed="0.349587"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:26.032020" elapsed="0.353315"/>
+</test>
+<test id="s1-s1-t2" name="Get Single User Test" line="9">
+<kw name="Create API Session" owner="api_keywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-03-15T15:52:26.388357" level="INFO">Creating Session using : alias=demo, url=https://reqres.in, headers={'x-api-key': 'reqres_49137685aceb4f4bba7bed2aa87f06fe', 'User-Agent': 'RobotFramework API Test'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>demo</arg>
+<arg>${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+<arg>verify=False</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-03-15T15:52:26.387527" elapsed="0.001180"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:26.386859" elapsed="0.002008"/>
+</kw>
+<kw name="Get Single User" owner="api_keywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-03-15T15:52:26.597133" level="INFO">GET Request : url=https://reqres.in/api/users/2 
+ path_url=/api/users/2 
+ headers={'User-Agent': 'RobotFramework API Test', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres_49137685aceb4f4bba7bed2aa87f06fe'} 
+ body=None 
+ </msg>
+<msg time="2026-03-15T15:52:26.597434" level="INFO">GET Response : url=https://reqres.in/api/users/2 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 15 Mar 2026 13:52:27 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Cache-Control': 'no-store', 'Etag': 'W/"2db-kbMaZEe/ijpvoRgLMye1Nr/BtfQ"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '20', 'Ratelimit-Policy': '20;w=60', 'Ratelimit-Remaining': '19', 'Ratelimit-Reset': '60', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Tg3OZ2EJQ5RELtCM2szo9r6Izr%2B5vgF1KruYJi0zeyY%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1773582747"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=Tg3OZ2EJQ5RELtCM2szo9r6Izr%2B5vgF1KruYJi0zeyY%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1773582747"', 'Server': 'cloudflare', 'Vary': 'Origin', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Ratelimit-Limit': '250', 'X-Ratelimit-Remaining': '244', 'X-Ratelimit-Reset': '1773619200', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Tip': 'Generate a complete backend from a description - app.reqres.in/dashboard', 'X-Reqres-Trial': 'true', 'X-Reqres-Trial-Days-Remaining': '11', 'X-Reqres-Trial-Expires': '2026-03-26T09:12:29.466Z', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': '52a34a2e-eca8-9e95-48d5-3a2be92cd488', 'X-Robots-Tag': 'noindex, nofollow', 'X-Xss-Protection': '1; mode=block', 'cf-cache-status': 'BYPASS', 'Content-Encoding': 'gzip', 'CF-RAY': '9dcbffad183c1579-HEL'} 
+ body={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_a","message":"Classic ReqRes still works. Projects add persistence, auth, and logs.","cta":{"label":"See example app","url":"https://app.reqres.in/examples/notes-app"},"context":"legacy_success"}} 
+ </msg>
+<msg time="2026-03-15T15:52:26.598009" level="INFO">/Users/vindyadiddeniya/Documents/projects/smart-meter-automation/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-03-15T15:52:26.598415" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>demo</arg>
+<arg>/api/users/2</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-03-15T15:52:26.389873" elapsed="0.208660"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2026-03-15T15:52:26.599010" elapsed="0.000770"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:26.389250" elapsed="0.210733"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:26.385961" elapsed="0.214487"/>
+</test>
+<test id="s1-s1-t3" name="Get Resource List Test" line="13">
+<kw name="Create API Session" owner="api_keywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-03-15T15:52:26.603555" level="INFO">Creating Session using : alias=demo, url=https://reqres.in, headers={'x-api-key': 'reqres_49137685aceb4f4bba7bed2aa87f06fe', 'User-Agent': 'RobotFramework API Test'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>demo</arg>
+<arg>${BASE_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+<arg>verify=False</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-03-15T15:52:26.602845" elapsed="0.001047"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:26.601814" elapsed="0.002251"/>
+</kw>
+<kw name="Get Resource List" owner="api_keywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-03-15T15:52:26.833453" level="INFO">GET Request : url=https://reqres.in/api/unknown 
+ path_url=/api/unknown 
+ headers={'User-Agent': 'RobotFramework API Test', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres_49137685aceb4f4bba7bed2aa87f06fe'} 
+ body=None 
+ </msg>
+<msg time="2026-03-15T15:52:26.833717" level="INFO">GET Response : url=https://reqres.in/api/unknown 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 15 Mar 2026 13:52:28 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Cache-Control': 'no-store', 'Etag': 'W/"484-1/QScSTDS9G4TlOkv3LXkZR/5J4"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '100', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Remaining': '99', 'Ratelimit-Reset': '60', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=9lCZXKO6in67pgHBgKOW5DzhilDRPz1feJo7oAwxJV4%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1773582748"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=9lCZXKO6in67pgHBgKOW5DzhilDRPz1feJo7oAwxJV4%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1773582748"', 'Server': 'cloudflare', 'Vary': 'Origin', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Ratelimit-Limit': '250', 'X-Ratelimit-Remaining': '243', 'X-Ratelimit-Reset': '1773619200', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Tip': 'Add real user auth to your app with magic codes - reqres.in/docs', 'X-Reqres-Trial': 'true', 'X-Reqres-Trial-Days-Remaining': '11', 'X-Reqres-Trial-Expires': '2026-03-26T09:12:29.466Z', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': '0359aaa9-16a2-3054-5476-b26f2e33faa3', 'X-Robots-Tag': 'noindex, nofollow', 'X-Xss-Protection': '1; mode=block', 'cf-cache-status': 'BYPASS', 'Content-Encoding': 'gzip', 'CF-RAY': '9dcbffaea96670dd-HEL'} 
+ body={"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"name":"cerulean","year":2000,"color":"#98B2D1","pantone_value":"15-4020"},{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},{"id":3,"name":"true red","year":2002,"color":"#BF1932","pantone_value":"19-1664"},{"id":4,"name":"aqua sky","year":2003,"color":"#7BC4C4","pantone_value":"14-4811"},{"id":5,"name":"tigerlily","year":2004,"color":"#E2583E","pantone_value":"17-1456"},{"id":6,"name":"blue turquoise","year":2005,"color":"#53B0AE","pantone_value":"15-5217"}],"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_a","message":"Classic ReqRes still works. Projects add persistence, auth, and logs.","cta":{"label":"See example app","url":"https://app.reqres.in/examples/notes-app"},"context":"legacy_success"}} 
+ </msg>
+<msg time="2026-03-15T15:52:26.835713" level="INFO">/Users/vindyadiddeniya/Documents/projects/smart-meter-automation/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-03-15T15:52:26.836082" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>demo</arg>
+<arg>/api/unknown</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-03-15T15:52:26.605069" elapsed="0.231092"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2026-03-15T15:52:26.836495" elapsed="0.000514"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:26.604549" elapsed="0.232639"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:26.600974" elapsed="0.236563"/>
+</test>
+<status status="PASS" start="2026-03-15T15:52:25.676958" elapsed="1.161505"/>
+</suite>
+<suite id="s1-s2" name="Integration Tests" source="/Users/vindyadiddeniya/Documents/projects/smart-meter-automation/tests/integration_tests.robot">
+<test id="s1-s2-t1" name="API Data Used In UI Test" line="11">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-03-15T15:52:27.304263" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in, headers={'x-api-key': 'reqres_49137685aceb4f4bba7bed2aa87f06fe'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>reqres</arg>
+<arg>${BASE_URL}</arg>
+<arg>headers={"x-api-key": "${API_KEY}"}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-03-15T15:52:27.303857" elapsed="0.000619"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-03-15T15:52:27.466171" level="INFO">GET Request : url=https://reqres.in/api/users/2 
+ path_url=/api/users/2 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres_49137685aceb4f4bba7bed2aa87f06fe'} 
+ body=None 
+ </msg>
+<msg time="2026-03-15T15:52:27.466803" level="INFO">GET Response : url=https://reqres.in/api/users/2 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 15 Mar 2026 13:52:28 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Cache-Control': 'no-store', 'Etag': 'W/"2db-kbMaZEe/ijpvoRgLMye1Nr/BtfQ"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '20', 'Ratelimit-Policy': '20;w=60', 'Ratelimit-Remaining': '19', 'Ratelimit-Reset': '60', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=9lCZXKO6in67pgHBgKOW5DzhilDRPz1feJo7oAwxJV4%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1773582748"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=9lCZXKO6in67pgHBgKOW5DzhilDRPz1feJo7oAwxJV4%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1773582748"', 'Server': 'cloudflare', 'Vary': 'Origin', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Ratelimit-Limit': '250', 'X-Ratelimit-Remaining': '242', 'X-Ratelimit-Reset': '1773619200', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Tip': 'Need more than /api/users? Build custom collections - app.reqres.in/dashboard', 'X-Reqres-Trial': 'true', 'X-Reqres-Trial-Days-Remaining': '11', 'X-Reqres-Trial-Expires': '2026-03-26T09:12:29.466Z', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': '2350e11d-6177-bdab-1745-405ed66df303', 'X-Robots-Tag': 'noindex, nofollow', 'X-Xss-Protection': '1; mode=block', 'cf-cache-status': 'BYPASS', 'Content-Encoding': 'gzip', 'CF-RAY': '9dcbffb2dc8f8d8d-HEL'} 
+ body={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_a","message":"Classic ReqRes still works. Projects add persistence, auth, and logs.","cta":{"label":"See example app","url":"https://app.reqres.in/examples/notes-app"},"context":"legacy_success"}} 
+ </msg>
+<msg time="2026-03-15T15:52:27.467308" level="INFO">/Users/vindyadiddeniya/Documents/projects/smart-meter-automation/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-03-15T15:52:27.467659" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>reqres</arg>
+<arg>url=/api/users/2</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-03-15T15:52:27.304774" elapsed="0.162979"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2026-03-15T15:52:27.468235" elapsed="0.000669"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-15T15:52:27.471320" level="INFO">${first_name} = Janet</msg>
+<var>${first_name}</var>
+<arg>${response.json()}[data][first_name]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-15T15:52:27.469340" elapsed="0.002080"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-03-15T15:52:27.472612" level="INFO">API returned user: Janet</msg>
+<arg>API returned user: ${first_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-03-15T15:52:27.471863" elapsed="0.000875"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:27.473680" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${SAUCE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-15T15:52:27.473140" elapsed="5.413397"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:32.889587" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:32.887663" elapsed="0.351287"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:33.240322" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.239764" elapsed="0.150606"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:33.390983" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.390713" elapsed="0.220598"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:.inventory_list</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.613442" elapsed="0.023118"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-03-15T15:52:33.637508" level="INFO">Using API data in UI test: Janet</msg>
+<arg>Using API data in UI test: ${first_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.636875" elapsed="0.000712"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.637849" elapsed="0.184439"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:27.303065" elapsed="6.520887"/>
+</test>
+<status status="PASS" start="2026-03-15T15:52:26.839572" elapsed="6.985680"/>
+</suite>
+<suite id="s1-s3" name="Smoke Test" source="/Users/vindyadiddeniya/Documents/projects/smart-meter-automation/tests/smoke_test.robot">
+<test id="s1-s3-t1" name="Framework Smoke Test" line="2">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-03-15T15:52:33.832838" level="INFO">Smart Meter Automation Framework Started</msg>
+<arg>Smart Meter Automation Framework Started</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.832166" elapsed="0.000828"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:33.830814" elapsed="0.002591"/>
+</test>
+<status status="PASS" start="2026-03-15T15:52:33.827117" elapsed="0.007628"/>
+</suite>
+<suite id="s1-s4" name="Ui Login Data Tests" source="/Users/vindyadiddeniya/Documents/projects/smart-meter-automation/tests/ui_login_data_tests.robot">
+<test id="s1-s4-t1" name="Login And Cart Actions For Multiple Users" line="13">
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nRunning test for ${username}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.848869" elapsed="0.000923"/>
+</kw>
+<kw name="Open Sauce Demo Login Page" owner="ui_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-15T15:52:33.852122" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x1125da8a0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.851350" elapsed="0.000824"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.852354" elapsed="0.000394"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.852895" elapsed="0.000355"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.853396" elapsed="0.000357"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-save-password-bubble</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.853899" elapsed="0.000349"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:33.854768" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-15T15:52:33.854439" elapsed="3.209998"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-15T15:52:37.065223" elapsed="0.362679"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:37.428821" elapsed="0.043881"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:33.850440" elapsed="3.622725"/>
+</kw>
+<kw name="Login To Sauce Demo" owner="ui_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:37.475905" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:37.475341" elapsed="0.284025"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:37.759999" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:37.759631" elapsed="0.138004"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:37.898430" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:37.898030" elapsed="0.193249"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.inventory_list</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:38.092030" elapsed="0.082578"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-03-15T15:52:37.473886" elapsed="0.701214"/>
+</kw>
+<kw name="Add First Item To Cart" owner="ui_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:38.176562" elapsed="0.072808"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-15T15:52:38.250042" elapsed="0.287838"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:38.538646" level="INFO">Clicking element 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:38.538247" elapsed="0.070534"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:38.753981" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-56.png"&gt;&lt;img src="selenium-screenshot-56.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:52:38.609039" elapsed="0.145144"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:remove-sauce-labs-backpack</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:38.754502" elapsed="0.020940"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:38.175904" elapsed="0.599699"/>
+</kw>
+<kw name="Open Cart" owner="ui_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:38.776491" level="INFO">Clicking element 'css:.shopping_cart_link'.</msg>
+<arg>css:.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:38.776253" elapsed="0.103946"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.cart_item</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:38.880409" elapsed="0.021170"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:38.980347" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-57.png"&gt;&lt;img src="selenium-screenshot-57.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:52:38.901814" elapsed="0.078655"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:38.775879" elapsed="0.204715"/>
+</kw>
+<kw name="Verify Cart Has Item" owner="ui_keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:38.997535" level="INFO">Element 'css:.cart_item' is displayed.</msg>
+<arg>css:.cart_item</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:38.981226" elapsed="0.016462"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:38.980805" elapsed="0.017035"/>
+</kw>
+<kw name="Remove Item From Cart" owner="ui_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:38.998725" level="INFO">Clicking element 'id:remove-sauce-labs-backpack'.</msg>
+<arg>id:remove-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:38.998473" elapsed="0.067094"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:39.143844" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-58.png"&gt;&lt;img src="selenium-screenshot-58.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:52:39.065840" elapsed="0.078124"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:38.998090" elapsed="0.146178"/>
+</kw>
+<kw name="Verify Cart Is Empty" owner="ui_keywords">
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:39.153269" level="INFO">Current page does not contain element 'css:.cart_item'.</msg>
+<arg>css:.cart_item</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2026-03-15T15:52:39.144900" elapsed="0.008504"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:39.144478" elapsed="0.009073"/>
+</kw>
+<kw name="Close Sauce Demo Browser" owner="ui_keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-15T15:52:39.154289" elapsed="0.151570"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:39.153790" elapsed="0.153112"/>
+</kw>
+<var name="${username}">standard_user</var>
+<var name="${password}">secret_sauce</var>
+<status status="PASS" start="2026-03-15T15:52:33.848595" elapsed="5.458634"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nRunning test for ${username}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-15T15:52:39.307847" elapsed="0.000867"/>
+</kw>
+<kw name="Open Sauce Demo Login Page" owner="ui_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-15T15:52:39.311230" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x112674680&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-15T15:52:39.310471" elapsed="0.000854"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:39.311626" elapsed="0.000489"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:39.312290" elapsed="0.000463"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:39.312927" elapsed="0.000390"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-save-password-bubble</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:39.313525" elapsed="0.003816"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:39.319304" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-15T15:52:39.318039" elapsed="3.527141"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-15T15:52:42.845813" elapsed="0.356656"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:43.202708" elapsed="0.030126"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:39.309680" elapsed="3.923346"/>
+</kw>
+<kw name="Login To Sauce Demo" owner="ui_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:43.234143" level="INFO">Typing text 'problem_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:43.233871" elapsed="0.295764"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:43.530669" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:43.530093" elapsed="0.142518"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:43.675113" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:43.674457" elapsed="0.171295"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.inventory_list</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:43.846139" elapsed="0.053733"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-03-15T15:52:43.233351" elapsed="0.666670"/>
+</kw>
+<kw name="Add First Item To Cart" owner="ui_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:43.900667" elapsed="0.024856"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-15T15:52:43.926291" elapsed="0.288377"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:44.215609" level="INFO">Clicking element 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:44.215112" elapsed="0.084723"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:44.451126" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-59.png"&gt;&lt;img src="selenium-screenshot-59.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:52:44.300243" elapsed="0.151039"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:remove-sauce-labs-backpack</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:44.451493" elapsed="0.020387"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:43.900279" elapsed="0.571768"/>
+</kw>
+<kw name="Open Cart" owner="ui_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:44.472916" level="INFO">Clicking element 'css:.shopping_cart_link'.</msg>
+<arg>css:.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:44.472671" elapsed="0.096686"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.cart_item</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:44.569889" elapsed="0.026628"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:44.662342" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:52:44.596728" elapsed="0.065989"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:44.472303" elapsed="0.190539"/>
+</kw>
+<kw name="Verify Cart Has Item" owner="ui_keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:44.679732" level="INFO">Element 'css:.cart_item' is displayed.</msg>
+<arg>css:.cart_item</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:44.663576" elapsed="0.016294"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:44.663146" elapsed="0.016869"/>
+</kw>
+<kw name="Remove Item From Cart" owner="ui_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:44.680882" level="INFO">Clicking element 'id:remove-sauce-labs-backpack'.</msg>
+<arg>id:remove-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:44.680633" elapsed="0.098297"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:44.861734" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-61.png"&gt;&lt;img src="selenium-screenshot-61.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:52:44.779144" elapsed="0.082805"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:44.680263" elapsed="0.181887"/>
+</kw>
+<kw name="Verify Cart Is Empty" owner="ui_keywords">
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:44.871287" level="INFO">Current page does not contain element 'css:.cart_item'.</msg>
+<arg>css:.cart_item</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2026-03-15T15:52:44.863003" elapsed="0.008398"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:44.862492" elapsed="0.009031"/>
+</kw>
+<kw name="Close Sauce Demo Browser" owner="ui_keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-15T15:52:44.872032" elapsed="0.161612"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:44.871726" elapsed="0.162229"/>
+</kw>
+<var name="${username}">problem_user</var>
+<var name="${password}">secret_sauce</var>
+<status status="PASS" start="2026-03-15T15:52:39.307657" elapsed="5.726492"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nRunning test for ${username}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-15T15:52:45.035513" elapsed="0.001106"/>
+</kw>
+<kw name="Open Sauce Demo Login Page" owner="ui_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-15T15:52:45.038037" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x11223ba40&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-15T15:52:45.037432" elapsed="0.000660"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:45.038270" elapsed="0.000414"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:45.038840" elapsed="0.000382"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:45.039374" elapsed="0.000376"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-save-password-bubble</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:45.039905" elapsed="0.000370"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:45.041407" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-15T15:52:45.040482" elapsed="3.441939"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-15T15:52:48.483053" elapsed="0.348841"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:48.838836" elapsed="0.029560"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:45.036983" elapsed="3.831605"/>
+</kw>
+<kw name="Login To Sauce Demo" owner="ui_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:48.869671" level="INFO">Typing text 'performance_glitch_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:48.869405" elapsed="0.275195"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:49.145453" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:49.144991" elapsed="0.165846"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:49.312017" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:49.311341" elapsed="5.180826"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.inventory_list</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:54.492470" elapsed="0.028256"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-03-15T15:52:48.868910" elapsed="5.652797"/>
+</kw>
+<kw name="Add First Item To Cart" owner="ui_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:54.522919" elapsed="0.020698"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-15T15:52:54.543944" elapsed="0.278465"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:54.823302" level="INFO">Clicking element 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:54.822837" elapsed="0.071052"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:55.040307" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-62.png"&gt;&lt;img src="selenium-screenshot-62.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:52:54.894291" elapsed="0.146543"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:remove-sauce-labs-backpack</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.041148" elapsed="0.021425"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:54.522264" elapsed="0.540447"/>
+</kw>
+<kw name="Open Cart" owner="ui_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:55.063450" level="INFO">Clicking element 'css:.shopping_cart_link'.</msg>
+<arg>css:.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.063242" elapsed="0.097956"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.cart_item</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.161513" elapsed="0.020949"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:55.243507" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-63.png"&gt;&lt;img src="selenium-screenshot-63.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.182758" elapsed="0.060872"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:55.062928" elapsed="0.180822"/>
+</kw>
+<kw name="Verify Cart Has Item" owner="ui_keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:55.260220" level="INFO">Element 'css:.cart_item' is displayed.</msg>
+<arg>css:.cart_item</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.244360" elapsed="0.015981"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:55.243962" elapsed="0.016508"/>
+</kw>
+<kw name="Remove Item From Cart" owner="ui_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:55.261197" level="INFO">Clicking element 'id:remove-sauce-labs-backpack'.</msg>
+<arg>id:remove-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.260996" elapsed="0.063728"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:55.410854" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-64.png"&gt;&lt;img src="selenium-screenshot-64.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.325217" elapsed="0.085758"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:55.260683" elapsed="0.150407"/>
+</kw>
+<kw name="Verify Cart Is Empty" owner="ui_keywords">
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:55.419772" level="INFO">Current page does not contain element 'css:.cart_item'.</msg>
+<arg>css:.cart_item</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.411641" elapsed="0.008251"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:55.411293" elapsed="0.008724"/>
+</kw>
+<kw name="Close Sauce Demo Browser" owner="ui_keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.420571" elapsed="0.130393"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:55.420235" elapsed="0.130974"/>
+</kw>
+<var name="${username}">performance_glitch_user</var>
+<var name="${password}">secret_sauce</var>
+<status status="PASS" start="2026-03-15T15:52:45.035001" elapsed="10.516343"/>
+</iter>
+<var>${username}</var>
+<var>${password}</var>
+<value>@{USERS}</value>
+<status status="PASS" start="2026-03-15T15:52:33.848090" elapsed="21.703481"/>
+</for>
+<kw name="Capture Screenshot On Failure" owner="ui_keywords" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.553595" elapsed="0.002777"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:55.552473" elapsed="0.004221"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:33.847463" elapsed="21.709797"/>
+</test>
+<status status="PASS" start="2026-03-15T15:52:33.836025" elapsed="21.723424"/>
+</suite>
+<suite id="s1-s5" name="Ui Tests" source="/Users/vindyadiddeniya/Documents/projects/smart-meter-automation/tests/ui_tests.robot">
+<test id="s1-s5-t1" name="Login And Add Item To Cart" line="8">
+<kw name="Open Sauce Demo Login Page" owner="ui_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-15T15:52:55.574421" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x112657d70&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.573353" elapsed="0.001166"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.574846" elapsed="0.001247"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.576836" elapsed="0.002660"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.580065" elapsed="0.000809"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-save-password-bubble</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.581274" elapsed="0.001161"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:55.583725" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-15T15:52:55.582929" elapsed="3.303658"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-15T15:52:58.887939" elapsed="0.351696"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:59.239925" elapsed="0.032277"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:55.572700" elapsed="3.699728"/>
+</kw>
+<kw name="Login To Sauce Demo" owner="ui_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:59.273812" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:59.273493" elapsed="0.245092"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:59.521453" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:59.520329" elapsed="0.136143"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:52:59.656940" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:52:59.656701" elapsed="0.204793"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.inventory_list</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:59.861851" elapsed="0.048319"/>
+</kw>
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2026-03-15T15:52:59.272965" elapsed="0.637351"/>
+</kw>
+<kw name="Add First Item To Cart" owner="ui_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:52:59.911080" elapsed="0.025884"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-15T15:52:59.937972" elapsed="0.295716"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:00.234642" level="INFO">Clicking element 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.234149" elapsed="0.074128"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:00.464806" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-65.png"&gt;&lt;img src="selenium-screenshot-65.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.308701" elapsed="0.156330"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:remove-sauce-labs-backpack</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.465286" elapsed="0.021154"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:59.910714" elapsed="0.575888"/>
+</kw>
+<kw name="Open Cart" owner="ui_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:00.487590" level="INFO">Clicking element 'css:.shopping_cart_link'.</msg>
+<arg>css:.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.487338" elapsed="0.114232"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.cart_item</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.601801" elapsed="0.020920"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:00.722294" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-66.png"&gt;&lt;img src="selenium-screenshot-66.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.622934" elapsed="0.099517"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:53:00.486971" elapsed="0.235608"/>
+</kw>
+<kw name="Verify Cart Has Item" owner="ui_keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:00.740346" level="INFO">Element 'css:.cart_item' is displayed.</msg>
+<arg>css:.cart_item</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.723298" elapsed="0.017192"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:53:00.722885" elapsed="0.017751"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.741072" elapsed="0.163498"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:52:55.571537" elapsed="5.333418"/>
+</test>
+<test id="s1-s5-t2" name="Login Add And Remove Item From Cart" line="16">
+<kw name="Open Sauce Demo Login Page" owner="ui_keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-15T15:53:00.907954" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x11269b770&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.907210" elapsed="0.000800"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.908204" elapsed="0.000430"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.908928" elapsed="0.001255"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.910409" elapsed="0.000460"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-save-password-bubble</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.911037" elapsed="0.000399"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:00.912001" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-15T15:53:00.911653" elapsed="2.936269"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-15T15:53:03.851628" elapsed="0.914156"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:53:04.766156" elapsed="0.064250"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:53:00.906817" elapsed="3.923968"/>
+</kw>
+<kw name="Login To Sauce Demo" owner="ui_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:04.835254" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:53:04.834659" elapsed="0.299630"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:05.135602" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:53:05.134520" elapsed="0.144592"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:05.282102" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:53:05.281794" elapsed="0.161370"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.inventory_list</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:53:05.443811" elapsed="0.087119"/>
+</kw>
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2026-03-15T15:53:04.831771" elapsed="0.699306"/>
+</kw>
+<kw name="Add First Item To Cart" owner="ui_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:53:05.532039" elapsed="0.033217"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-03-15T15:53:05.565534" elapsed="0.312182"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:05.878605" level="INFO">Clicking element 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:53:05.878134" elapsed="0.087031"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:06.104538" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-67.png"&gt;&lt;img src="selenium-screenshot-67.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:53:05.965419" elapsed="0.139267"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:remove-sauce-labs-backpack</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:53:06.104893" elapsed="0.019868"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:53:05.531497" elapsed="0.593424"/>
+</kw>
+<kw name="Open Cart" owner="ui_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:06.126154" level="INFO">Clicking element 'css:.shopping_cart_link'.</msg>
+<arg>css:.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:53:06.125669" elapsed="0.105458"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.cart_item</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-15T15:53:06.231417" elapsed="0.020899"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:06.312586" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-68.png"&gt;&lt;img src="selenium-screenshot-68.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:53:06.252581" elapsed="0.060139"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:53:06.125287" elapsed="0.187567"/>
+</kw>
+<kw name="Remove Item From Cart" owner="ui_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:06.313888" level="INFO">Clicking element 'id:remove-sauce-labs-backpack'.</msg>
+<arg>id:remove-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-15T15:53:06.313631" elapsed="0.068222"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:06.479352" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-69.png"&gt;&lt;img src="selenium-screenshot-69.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-15T15:53:06.382179" elapsed="0.097297"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:53:06.313248" elapsed="0.166350"/>
+</kw>
+<kw name="Verify Cart Is Empty" owner="ui_keywords">
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2026-03-15T15:53:06.488402" level="INFO">Current page does not contain element 'css:.cart_item'.</msg>
+<arg>css:.cart_item</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2026-03-15T15:53:06.480343" elapsed="0.008192"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:53:06.479887" elapsed="0.008791"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-15T15:53:06.489194" elapsed="0.153994"/>
+</kw>
+<status status="PASS" start="2026-03-15T15:53:00.905899" elapsed="5.737667"/>
+</test>
+<status status="PASS" start="2026-03-15T15:52:55.560966" elapsed="11.083968"/>
+</suite>
+<status status="PASS" start="2026-03-15T15:52:25.618629" elapsed="41.027663"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="8" fail="0" skip="0">Tests</stat>
+<stat name="Api Tests" id="s1-s1" pass="3" fail="0" skip="0">Tests.Api Tests</stat>
+<stat name="Integration Tests" id="s1-s2" pass="1" fail="0" skip="0">Tests.Integration Tests</stat>
+<stat name="Smoke Test" id="s1-s3" pass="1" fail="0" skip="0">Tests.Smoke Test</stat>
+<stat name="Ui Login Data Tests" id="s1-s4" pass="1" fail="0" skip="0">Tests.Ui Login Data Tests</stat>
+<stat name="Ui Tests" id="s1-s5" pass="2" fail="0" skip="0">Tests.Ui Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
