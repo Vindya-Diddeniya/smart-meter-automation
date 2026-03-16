@@ -18,7 +18,7 @@ Login And Cart Actions For Multiple Users
         Add First Item To Cart
         Open Cart
         Verify Cart Has Item
-        Remove Item From Cart
+        Remove First Item From Cart
         Verify Cart Is Empty
         Close Sauce Demo Browser
     END
